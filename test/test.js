@@ -1,8 +1,8 @@
 const assert = require('chai').assert;
 const urlq = require('../index.js');
 
-var q1 = '?sections=carbs,dessert&diets=gluten-free';
-var q2 = '?sections=carbs,dessert';
+const q1 = '?sections=carbs,dessert&diets=gluten-free';
+const q2 = '?sections=carbs,dessert';
 
 
 describe('addToQueryParam()', function() {

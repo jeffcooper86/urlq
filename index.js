@@ -7,9 +7,10 @@ module.exports.updateUrlQuery = updateUrlQuery;
 
 /**
  * Returns a new query string with values added to a query parameter.
- * @param {*} The value to add.
+ * @param {*} addV The value to add.
  * @param {String} p The query parameter to update.
- * @param {String} q The query string. 
+ * @param {String} q The query string.
+ * @returns {String}
  */
 function addToQueryParam(addV, p, q) {
   var newQ;
