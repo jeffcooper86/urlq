@@ -15,8 +15,18 @@ urlq.getParam(q1, 'diets')
 urlq.getParam(q1, 'non-existing')
 => []
 
-urlq.addVal(q1, 'sections', 'soups')
+var q2 = urlq.addVal(q1, 'sections', 'soups');
+q2;
 => '?sections=carbs,dessert,soups&diets=gluten-free'
+
+urlq.updateQuery(q2);
+urlq.getParam(window.location.search, 'sections');
+=> ['carbs', 'dessert', 'soups']
+
+var q3 = urlq.updateParam(q2, 'diets', ['vegetarian', 'pescepescetarian']);
+urlq.removeParam(q2, 'sections');
+q3;
+=> '?diets=vegetarian,pescepescetarian'
 ```
 
 ## Functions
