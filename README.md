@@ -6,14 +6,17 @@ A lightweight library to get/set url query string values.
 const urlq = require('urlq');
 const q1 = '?sections=carbs,dessert&diets=gluten-free';
 
-urlq.getQueryParamValsFromQuery(q1, 'sections')
+urlq.getParam(q1, 'sections')
 => ['carbs', 'dessert']
 
-urlq.getQueryParamValsFromQuery(q1, 'diets')
+urlq.getParam(q1, 'diets')
 => ['gluten-free']
 
-urlq.getQueryParamValsFromQuery(q1, 'non-existing')
+urlq.getParam(q1, 'non-existing')
 => []
+
+urlq.addVal(q1, 'sections', 'soups')
+=> '?sections=carbs,dessert,soups&diets=gluten-free'
 ```
 
 ## Functions
